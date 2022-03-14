@@ -6,20 +6,6 @@ from service.core.logic.business_logic import run_prime_factor_calculation
 
 router = APIRouter()
 
-
-# @router.get("/example", tags=["example get"])
-# def example_get():
-#     """
-#     Say hej!
-
-#     This will greet you properly
-
-#     And this path operation will:
-#     * return "hej!"
-#     """
-#     return {"msg": "Hej!"}
-
-
 @router.post("/hello", response_model=MessageOutput, tags=["hello post"])
 def hello_endpoint(inputs: MessageInput):
     """
